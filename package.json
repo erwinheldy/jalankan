@@ -1,0 +1,33 @@
+{
+  "name": "jalankan",
+  "version": "0.0.1",
+  "description": "Running multiple npm scripts in parallel or sequentially, quickly and efficiently",
+  "license": "MIT",
+  "repository": "https://github.com/erwinheldy/jalankan",
+  "bugs": {
+    "url": "https://github.com/erwinheldy/jalankan/issues"
+  },
+  "keywords": [
+    "run script parallel",
+    "run script sequential",
+    "npm scripts"
+  ],
+  "bin": "./dist/cli.cjs",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "pkgroll --watch --minify",
+    "build": "shx rm -rf dist && pkgroll --minify",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "0.40.2",
+    "@types/node": "20.4.8",
+    "eslint": "8.46.0",
+    "pkgroll": "1.11.0",
+    "shx": "0.3.4",
+    "typescript": "5.1.6"
+  }
+}
